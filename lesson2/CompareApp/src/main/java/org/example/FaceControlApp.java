@@ -9,7 +9,5 @@ public class FaceControlApp {
         int age = in.nextInt();
 
         String result = (age > 18) ?  "OK" : "Not OK";
-
-
     }
 }
