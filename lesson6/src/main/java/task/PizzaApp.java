@@ -3,6 +3,14 @@ package task;
 class Pizza {
     String name;
     Integer size;
+
+    public Pizza(String margarita, int i) {
+
+    }
+
+    public Pizza() {
+
+    }
 }
 
 
