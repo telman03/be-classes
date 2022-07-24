@@ -8,4 +8,3 @@
 - Arrays. Working with strings
 - Methods in Java
 - Objects, Comparing objects, visibility modifiers, static
-- 
