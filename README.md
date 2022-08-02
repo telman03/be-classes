@@ -8,3 +8,4 @@
 - Enum, classloader, Java Memory model. Testing Java code
 - OOP basics, abstract classes. Interfaces
 - Collection API, Lists, generics
+- Set, Stack, Queue, Map
