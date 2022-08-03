@@ -7,20 +7,24 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DiagonalDifferenceTest {
+public class DiagonalDifference2Test {
 
-    private DiagonalDifference dd = new DiagonalDifferenceV3();
-
-
+    private List<DiagonalDifference> dds = Arrays.asList(
+            new DiagonalDifferenceV1(),
+            new DiagonalDifferenceV2(),
+            new DiagonalDifferenceV3()
+    );
     @Test
     public void test1() {
         List<Integer> list1 = Arrays.asList(1, 2, 3);
         List<Integer> list2 = Arrays.asList(4, 5, 6);
         List<Integer> list3 = Arrays.asList(17, 8, 9);
         List<List<Integer>> data = Arrays.asList(list1, list2, list3);
-        int real = dd.diagonalDifference(data);
         int expected = 10;
-        assertEquals(expected, real);
+        dds.forEach(dd -> {
+            int real = dd.diagonalDifference(data);
+            assertEquals(expected, real);
+        });
     }
     @Test
     public void test2() {
@@ -29,9 +33,10 @@ public class DiagonalDifferenceTest {
                 Arrays.asList(4, 5, 6),
                 Arrays.asList(10, 8, -12)
         );
-
-        int real = dd.diagonalDifference(data);
         int expected = 15;
-        assertEquals(expected, real);
+        dds.forEach(dd -> {
+            int real = dd.diagonalDifference(data);
+            assertEquals(expected, real);
+        });
     }
 }

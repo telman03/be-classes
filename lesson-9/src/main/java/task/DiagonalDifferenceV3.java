@@ -2,7 +2,8 @@ package task;
 
 import java.util.List;
 
-public class DiagonalDifferenceV3 {
+public class DiagonalDifferenceV3 implements DiagonalDifference {
+    @Override
     public int diagonalDifference(List<List<Integer>> data) {
         int size = data.size();
 
