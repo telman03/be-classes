@@ -9,7 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DiagonalDifferenceTest {
 
-    private DiagonalDifferenceV2 dd = new DiagonalDifferenceV2();
+    private DiagonalDifferenceV3 dd = new DiagonalDifferenceV3();
+    private DiagonalDifferenceV3 dd2 = new DiagonalDifferenceV3();
+    private DiagonalDifferenceV3 dd3 = new DiagonalDifferenceV3();
+
     @Test
     public void test1() {
         List<Integer> list1 = Arrays.asList(1, 2, 3);

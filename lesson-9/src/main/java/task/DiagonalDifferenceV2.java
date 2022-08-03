@@ -10,8 +10,9 @@ public class DiagonalDifferenceV2 {
         int sum1 = 0;
         int sum2 = 0;
         for (int i = 0; i < size; i++) {
-            sum1 += data.get(i).get(i);
-            sum2 += data.get(i).get(size - i - 1);
+            List<Integer> row = data.get(i);
+            sum1 += row.get(i);
+            sum2 += row.get(size - i - 1);
         }
 
 
