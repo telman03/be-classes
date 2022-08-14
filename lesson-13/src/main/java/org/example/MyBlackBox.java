@@ -26,7 +26,6 @@ public class MyBlackBox implements Iterable<String> {
             }
 
         };
-
         return it;
     }
 }
