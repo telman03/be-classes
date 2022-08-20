@@ -67,6 +67,7 @@ public class Java8Filter {
 
         System.out.println(randoms);
 
+
     }
 
 }
