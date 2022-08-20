@@ -42,6 +42,17 @@ public class CharacterPositions {
 
         return counter;
     }
+
+    public List<Pair<Character, List<Integer>>> sortMap(Map<Character, List<Integer>> data){
+        List<Pair<Character, List<Integer>>> list = new ArrayList<>();
+        data.forEach((ch, poss) -> {
+
+            Pair<Character, List<Integer>> pair = Pair.of(ch, poss);
+            list.add(pair);
+        });
+        return list;
+    }
+
     public static void main(String[] args) {
         CharacterPositions app = new CharacterPositions();
         String line = "Hello, my dear friend, please keep learning, I'll guarantee you'll reach the moment you understand everything";
