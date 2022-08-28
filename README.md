@@ -12,3 +12,4 @@
 - Set, Stack, Queue, Map
 - Comparator / Comparable, anonymous classes, internal classes, nested class, generics. Patterns: Controller-Service-DAO
 - Working with date and time. Date / time in Java 8+
+- Java 8+ - lambda, Stream API
