@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * given: List<Interval>
@@ -31,9 +28,19 @@ import java.util.Map;
 
 public class IntervalsApp {
     public void count(List<Interval> data){
-        HashSet<Integer> points = new HashSet<>();
-        data.forEach(x->{points.add(x.low); points.add(x.hi);});
-        System.out.println(points);
+        HashSet<Integer> unique = new HashSet<>();
+        data.forEach(x->{unique.add(x.low); unique.add(x.hi);});
+        ArrayList<Integer> points = new ArrayList<>(unique);
+//        sorting with a guarantee
+        points.sort(Comparator.comparingInt(x ->x));
+//        making subIntervals
+        ArrayList<Interval> subIntervals = new ArrayList<>();
+        for (int i = 0; i < points.size()-1; i++) {
+            subIntervals.add(
+                Interval.of(points.get(i), points.get(i+1))
+            );
+        }
+        System.out.println(subIntervals);
     }
     public Map<Interval, Integer> count1(List<Interval> data){
         throw new IllegalStateException("not implemented");

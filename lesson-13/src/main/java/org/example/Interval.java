@@ -9,6 +9,11 @@ public class Interval {
         this.hi = hi;
     }
 
+    @Override
+    public String toString() {
+        return String.format("[%d - %d]", low, hi);
+    }
+
     public static Interval of(int a, int b){
         return new Interval(a, b);
     }
