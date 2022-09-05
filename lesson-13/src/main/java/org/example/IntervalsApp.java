@@ -27,7 +27,7 @@ import java.util.*;
  */
 
 public class IntervalsApp {
-    public void count(List<Interval> data){
+    public void count0(List<Interval> data){
         HashSet<Integer> unique = new HashSet<>();
         data.forEach(x->{unique.add(x.low); unique.add(x.hi);});
         ArrayList<Integer> points = new ArrayList<>(unique);
@@ -65,7 +65,7 @@ public class IntervalsApp {
                 Interval.of(5,8)
         );
         IntervalsApp app = new IntervalsApp();
-        app.count(data);
+        app.count0(data);
 
     }
 }
