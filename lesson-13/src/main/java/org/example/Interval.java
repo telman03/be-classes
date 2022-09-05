@@ -9,6 +9,10 @@ public class Interval {
         this.hi = hi;
     }
 
+    public boolean contains(Interval sub){
+        return low <= sub.low && hi >= sub.hi;
+    }
+
     @Override
     public String toString() {
         return String.format("[%d - %d]", low, hi);

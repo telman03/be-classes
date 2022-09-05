@@ -40,7 +40,14 @@ public class IntervalsApp {
                 Interval.of(points.get(i), points.get(i+1))
             );
         }
-        System.out.println(subIntervals);
+        subIntervals.forEach(sub -> {
+            int[] c = {0};
+            data.forEach(interval -> {
+                if(interval.contains(sub)) c[0]++;
+            });
+            System.out.printf("sub: %s => %d\n", sub,c[0]);
+        });
+
     }
     public Map<Interval, Integer> count1(List<Interval> data){
         throw new IllegalStateException("not implemented");
@@ -59,5 +66,6 @@ public class IntervalsApp {
         );
         IntervalsApp app = new IntervalsApp();
         app.count(data);
+
     }
 }
