@@ -25,9 +25,9 @@ public class Java8 {
             System.out.printf("Value is: %d", x);
         };
 
-        Consumer<Integer> printer31 = (Integer x) -> System.out.printf("Value is: %d", x);
+        Consumer<Integer> printer31 = (Integer x) -> System.out.printf("Value is: %d\n", x);
 
-        Consumer<Integer> printer3 = x -> System.out.printf("Value is: %d", x);
+        Consumer<Integer> printer3 = x -> System.out.printf("\nValue is: %d", x);
 
         xs.forEach(x -> printer.accept(x));
         xs.forEach(printer);
