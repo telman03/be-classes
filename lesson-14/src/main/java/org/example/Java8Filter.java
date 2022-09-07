@@ -60,7 +60,12 @@ public class Java8Filter {
                 .collect(Collectors.toList());
         Stream<Double> generated = Stream.generate(() -> Math.random());
 
-        System.out.println(xx);
+        List<Integer> randoms = Stream.generate(() -> Math.random())
+                .map(x -> (int)(x * 10 + 10))
+                .limit(10)
+                .collect(Collectors.toList());
+
+        System.out.println(randoms);
     }
 
 }
