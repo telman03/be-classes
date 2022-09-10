@@ -9,7 +9,7 @@
 - Enum, classloader, Java Memory model. Testing Java code
 - OOP basics, abstract classes. Interfaces
 - Collection API, Lists, generics
-- Set, Stack, Queue, Map
+- Set, Stack, Queue, Map 
 - Comparator / Comparable, anonymous classes, internal classes, nested class, generics. Patterns: Controller-Service-DAO
 - Working with date and time. Date / time in Java 8+
 - Java 8+ - lambda, Stream API
