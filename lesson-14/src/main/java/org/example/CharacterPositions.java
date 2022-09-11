@@ -3,6 +3,8 @@ package org.example;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class CharacterPositions {
 
@@ -31,7 +33,8 @@ public class CharacterPositions {
      * v:1:<101>
      */
 
-    public static void main(String[] args) {
+
+    public static void main0(String[] args) {
         String line = "Hello, my dear friend, please keep learning, " +
                 "I'll guarantee you'll reach the moment you understand everything";
 
@@ -40,6 +43,24 @@ public class CharacterPositions {
                 .collect(Collectors.toList());
 
         System.out.println(collect);
+    }
+    public static void main1(String[] args) {
+        String line = "Hello, my dear friend, please keep learning, " +
+                "I'll guarantee you'll reach the moment you understand everything";
+
+        List<Integer> collect = IntStream.range(0, line.length())
+                .boxed()
+                .collect(Collectors.toList());
+
+        System.out.println(collect);
+    }
+    public static void main(String[] args) {
+        String line = "Hello, my dear friend, please keep learning, " +
+                "I'll guarantee you'll reach the moment you understand everything";
+
+        Stream<Pair<Character, Integer>> pairs = IntStream.range(0, line.length())
+                .mapToObj(idx -> Pair.of(line.charAt(idx), idx));
+        System.out.println(pairs);
     }
 }
 
