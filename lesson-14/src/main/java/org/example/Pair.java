@@ -14,6 +14,7 @@ public class Pair<A, B> {
         return String.format("(%s, %s)", a, b);
     }
 
+
     public static <A, B> Pair<A, B> of(A key, B value) {
         return new Pair<>(key, value);
     }

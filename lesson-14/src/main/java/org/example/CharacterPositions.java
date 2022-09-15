@@ -1,6 +1,7 @@
 package org.example;
 
 
+import java.rmi.MarshalledObject;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -57,10 +58,12 @@ public class CharacterPositions {
     public static void main(String[] args) {
         String line = "Hello, my dear friend, please keep learning, " +
                 "I'll guarantee you'll reach the moment you understand everything";
+        Map<Character, List<Pair<Character, Integer>>> grouped =
+        IntStream.range(0, line.length())
+                .mapToObj(idx -> Pair.of(line.charAt(idx), idx))
+                .collect(Collectors.groupingBy(p->p.a));
 
-        Stream<Pair<Character, Integer>> pairs = IntStream.range(0, line.length())
-                .mapToObj(idx -> Pair.of(line.charAt(idx), idx));
-        System.out.println(pairs);
+        grouped.forEach((k, v) -> System.out.printf("%s -> %s\n", k, v));
     }
 }
 
