@@ -58,18 +58,20 @@ public class CharacterPositions {
     public static void main(String[] args) {
         String line = "Hello, my dear friend, please keep learning, " +
                 "I'll guarantee you'll reach the moment you understand everything";
-        Stream<Pair<Character, List<Integer>>> grouped = IntStream.range(0, line.length())
+        Stream<Pair<Character, Pair<Integer, List<Integer>>>> grouped = IntStream.range(0, line.length())
                 .mapToObj(idx -> Pair.of(line.charAt(idx), idx))
                 .filter(p -> Character.isLetter(p.a))
-                .collect(Collectors.groupingBy(p->p.a))
+                .collect(Collectors.groupingBy(p -> p.a))
                 .entrySet()
                 .stream()
                 .map(e ->
                         Pair.of(
-                        e.getKey(),
-                        e.getValue().stream().map(p->p.b).collect(Collectors.toList())
+                                e.getKey(),
+                                e.getValue().stream().map(p -> p.b).collect(Collectors.toList())
                         )
-                );
+                )
+                .sorted(Comparator.comparingInt(x -> x.b.size()))
+                .map(p -> Pair.of(p.a, Pair.of(p.b.size(), p.b)));
 
         grouped.forEach(p -> System.out.printf("%s -> %s\n", p.a, p.b));
     }
