@@ -1,0 +1,14 @@
+####
+GET http://localhost:8080/hello/x=5&y=7
+
+name=Jin&password=123
+
+####
+GET http://localhost:8080/hello/x=5&y=7%z=3&z=15
+
+
+####
+POST http://localhost:8080/hello?user=Jin&password=123
+
+####
+POST http://localhost:8080/hello
