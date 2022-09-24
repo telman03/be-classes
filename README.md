@@ -16,5 +16,5 @@
 - Java 8+ - method / constructor reference, Optional, parallel. Exceptions
 - I/O - working with files
 ## Module 2: Java Web
-- Maven, HTTP, Server, Servlet API. Jetty server
+- Maven, HTTP, Server, Servlet API. Jetty server 
 
