@@ -33,7 +33,7 @@ public class HelloServlet extends HttpServlet {
 
         int x = Integer.parseInt(xs);
         int y = Integer.parseInt(ys);
-        int z = x +y;
+        int z = x + y;
 
         try(PrintWriter w = rs.getWriter()) {
             w.println(queryString);
