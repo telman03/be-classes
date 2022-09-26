@@ -17,4 +17,4 @@
 - I/O - working with files
 ## Module 2: Java Web
 - Maven, HTTP, Server, Servlet API. Jetty server 
-
+- Servlet API, Freemarker template, Annotations
