@@ -4,28 +4,31 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.List;
+import java.net.URL;
 
 
 public class ShowTextFileServlet extends HttpServlet {
-
-    // http://localhost:8080/showtextfile
     @Override
     protected void doGet(HttpServletRequest rq, HttpServletResponse rs) throws ServletException, IOException {
-        String badExample = "src/main/java/lesson22web/test1.html";
-        String fileName = getClass().getClassLoader().getResource("test1.html").getFile();
+        String val;
+        try(PrintWriter w = rs.getWriter()) {
+            URL url = getClass().getClassLoader().getResource("test.html");
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader(url.openStream()));
 
-        List<String> lines = Files.readAllLines(Path.of(fileName));
-        try (PrintWriter w = rs.getWriter()){
-            for (String line: lines) {
-                w.println(line);
+            while ((val = br.readLine()) != null) {
+               w.println(val);
             }
+
+            // Closing the file
+            br.close();
+        }catch (Exception e){
+            e.fillInStackTrace();
         }
+
     }
-
 }
-
