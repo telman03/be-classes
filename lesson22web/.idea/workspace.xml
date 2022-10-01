@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="934d7921-844d-4147-92f4-8168c8b01681" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/.idea/lesson23sql.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson23web/src/main/java/sql/SQLApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/HpFileServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/IbmFileServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/ServerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/ServerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/ShowTextFileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/ShowTextFileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lesson23web/src/main/java/sql/SQLApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson23web/src/main/java/sql/SQLApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +89,7 @@
       <workItem from="1664273975557" duration="3649000" />
       <workItem from="1664366175579" duration="6189000" />
       <workItem from="1664448193125" duration="2217000" />
+      <workItem from="1664536962007" duration="35000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,7 @@ version: '3.3'
 services:
   postgres:
     image: postgres:9.6
-    container_name: pg_0
+    container_name: pg_1
     environment:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'eden258'
