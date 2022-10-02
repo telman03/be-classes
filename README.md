@@ -19,3 +19,4 @@
 - Maven, HTTP, Server, Servlet API. Jetty server 
 - Servlet API, Freemarker template, Annotations
 - JDBC, connection, statements. Relational databases. SQL basics
+- Creating database schema. ER-diagram. Keys, joins, relations
