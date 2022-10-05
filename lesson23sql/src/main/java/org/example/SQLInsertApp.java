@@ -12,7 +12,9 @@ public class SQLInsertApp {
                 "postgres",
                 "eden258"
         );
-        PreparedStatement st = conn.prepareStatement("insert into person(id, name) values (?, ?)");
+        PreparedStatement st = conn.prepareStatement(
+                "insert into person(id, name) values (?, ?)"
+        );
 
         st.setInt(1,41);
         st.setString(2, "Alexander I");
