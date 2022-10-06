@@ -22,3 +22,4 @@
 - Creating database schema. ER-diagram. Keys, joins, relations
 - Grouping operations, nested queries
 - Views, stored procedures, triggers, indices, transactions, transaction isolation levels
+- Servlet filters, cookies, auth. HTTP session
