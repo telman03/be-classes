@@ -1,5 +1,5 @@
-# ABB Back-end Classes
-
+# ABB Back-end Classes 
+ 
 ## Module 1: Basic Java
 - About Java. Classes, packages, main(). System.out. Variables, scope of visibility, primitive data types, null. Default values, type casting. Ascending vs descending type cast 
 - Control structures: if-else / switch / ternary / unary operation. Logical operations: !, &&, ||. Scanner. Loops, generating pseudo-random values 
@@ -22,3 +22,8 @@
 - Creating database schema. ER-diagram. Keys, joins, relations
 - Grouping operations, nested queries
 - Views, stored procedures, triggers, indices, transactions, transaction isolation levels
+- Servlet filters, cookies, auth. HTTP session 
+- Module recap, practice
+ 
+## Module 3: Algorythms
+- Algorythm basics. Algorythm paradigms. Sorting algorithms. Merge sort, quick sort.
