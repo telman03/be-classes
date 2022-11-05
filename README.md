@@ -29,3 +29,4 @@
 - Algorythm basics. Algorythm paradigms. Sorting algorithms. Merge sort, quick sort.
 - Bit operations
 - Recursion 
+ 
