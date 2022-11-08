@@ -1,12 +1,11 @@
 package lesson30;
 
-
 import java.util.Arrays;
 import java.util.Comparator;
 
 public class SortApp {
 
-    public static void main(String[] args) {
+    public static void main0(String[] args) {
         Integer[] arr = {5,62,12,56,22,1, 55, 99};
 //    System.out.println(Arrays.toString(sort(arr)));
         System.out.println(Arrays.toString(sortJalal(arr)));
@@ -44,9 +43,75 @@ public class SortApp {
         return arr;
     }
 
+    public static void merge1(int[] data, int indexLeft, int indexMiddle, int indexRight) {
+        int[] leftArray = Arrays.copyOfRange(data, indexLeft, indexMiddle );
+        int[] rightArray = Arrays.copyOfRange(data, indexMiddle, indexRight  );
+
+        if(leftArray.length > 0 && rightArray.length > 0 ){
+
+            int pointer1 = 0;
+            int pointer2 = 0;
+            int i = indexLeft;
+
+            while(i < indexRight  ) {
+
+                if( pointer2 == rightArray.length || (pointer1 < leftArray.length && leftArray[pointer1] < rightArray[pointer2])){
+                    data[i] = leftArray[pointer1];
+                    pointer1++;
+                }
+                else if ( pointer1 == leftArray.length || pointer2 < rightArray.length){
+                    data[i] = rightArray[pointer2];
+                    pointer2++;
+                }
+                i++;
+            }
+        }
+
+    }
+
+
     // starting point
+    public static int[] merge0exp(int[] data1, int[] data2) {
+        int[] data3 = new int[data1.length + data2.length];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (i < data1.length && j < data2.length)
+            data3[k++] = (data1[i] < data2[j]) ? data1[i++] : data2[j++];
+
+        while (i < data1.length)
+            data3[k++] = data1[i++];
+
+        while (j < data2.length)
+            data3[k++] = data2[j++];
+
+        return data3;
+    }
+
     public static int[] merge0(int[] data1, int[] data2) {
-        throw new IllegalArgumentException("not implemented");
+        int[] data3 = new int[data1.length + data2.length];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (i < data1.length && j < data2.length)
+            data3[k++] = (data1[i] < data2[j]) ? data1[i++] : data2[j++];
+
+        // optimisation
+        if (i < data1.length) System.arraycopy(data1, i, data3, k, data1.length - i);
+        if (j < data2.length) System.arraycopy(data2, j, data3, k, data2.length - j);
+
+        return data3;
+    }
+
+    public static void main(String[] args) {
+        int[] as = {1,3,5,7};
+        int[] bs = {2,3,4,10,100};
+        int[] cs = merge0(as, bs);
+        System.out.println(Arrays.toString(as));
+        System.out.println(Arrays.toString(bs));
+        System.out.println(Arrays.toString(cs));
     }
 
     public static void merge(int[] data, int indexLeft, int indexMiddle, int indexRight) {
