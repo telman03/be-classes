@@ -24,8 +24,6 @@ public class SortApp {
         }
         return arr;
     }
-
-
     /**
      * sort algorithm ...................
      * the best case complexity is: O(n)
