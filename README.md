@@ -30,4 +30,6 @@
 - Bit operations
 - Recursion 
 - Linked lists
+- Stack, Queue. Hash data structures
+
 
