@@ -31,5 +31,6 @@
 - Recursion 
 - Linked lists
 - Stack, Queue. Hash data structures
+- Binary Search
 
 
