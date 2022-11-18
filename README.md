@@ -33,5 +33,6 @@
 - Stack, Queue. Hash data structures
 - Binary Search
 - Trees
+- Graphs, search in graphs. BFS, DFS
 
 
