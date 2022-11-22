@@ -34,5 +34,7 @@
 - Binary Search
 - Trees 
 - Graphs, search in graphs. BFS, DFS
+- Snake game introduction
  
+
 
