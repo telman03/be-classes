@@ -27,7 +27,7 @@
  
 ## Module 3: Algorythms
 - Algorythm basics. Algorythm paradigms. Sorting algorithms. Merge sort, quick sort.
-- Bit operations
+- Bit operations 
 - Recursion 
 - Linked lists 
 - Stack, Queue. Hash data structures
