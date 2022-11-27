@@ -23,7 +23,7 @@
 - Grouping operations, nested queries
 - Views, stored procedures, triggers, indices, transactions, transaction isolation levels
 - Servlet filters, cookies, auth. HTTP session 
-- Module recap, practice
+- Module recap, practice 
  
 ## Module 3: Algorythms
 - Algorythm basics. Algorythm paradigms. Sorting algorithms. Merge sort, quick sort.
