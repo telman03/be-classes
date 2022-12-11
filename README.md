@@ -37,5 +37,8 @@
 - Snake game introduction
 - Snake challenge
 
+## Module 4: Java Frameworks
+- Spring Framework basics. Inversion of Control and Dependency Injection principles. Spring Beans
+
 
 
