@@ -23,13 +23,22 @@
 - Grouping operations, nested queries
 - Views, stored procedures, triggers, indices, transactions, transaction isolation levels
 - Servlet filters, cookies, auth. HTTP session 
-- Module recap, practice
+- Module recap, practice 
  
 ## Module 3: Algorythms
 - Algorythm basics. Algorythm paradigms. Sorting algorithms. Merge sort, quick sort.
-- Bit operations
+- Bit operations 
 - Recursion 
-- Linked lists
+- Linked lists 
 - Stack, Queue. Hash data structures
+- Binary Search
+- Trees 
+- Graphs, search in graphs. BFS, DFS
+- Snake game introduction
+- Snake challenge
+
+## Module 4: Java Frameworks
+- Spring Framework basics. Inversion of Control and Dependency Injection principles. Spring Beans
+
 
 
