@@ -12,6 +12,7 @@ public class SortApp {
 
     }
 
+
     public static Integer[] sort(Integer[] arr){
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -40,6 +41,8 @@ public class SortApp {
         }
         return arr;
     }
+
+
 
     public static void merge1(int[] data, int indexLeft, int indexMiddle, int indexRight) {
         int[] leftArray = Arrays.copyOfRange(data, indexLeft, indexMiddle );
