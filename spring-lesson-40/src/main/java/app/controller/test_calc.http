@@ -1,0 +1,6 @@
+####
+GET http://localhost:8080/calc/add?x=4&y=3
+
+####
+GET http://localhost:8080/calc/integral?x=11.2
+
