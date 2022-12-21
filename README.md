@@ -41,5 +41,5 @@
 - Spring Framework basics. Inversion of Control and Dependency Injection principles. Spring Beans
 - Spring Boot, Spring MVC
 - Spring MVC, REST API, Restful web service
+- Spring JDBC, H2
 
- 
