@@ -3,8 +3,7 @@ package app;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 public class TestApp {
     public static void main0(String[] args) {
@@ -20,8 +19,7 @@ public class TestApp {
         Class<?> aClass = Class.forName(classname);
         Constructor<?>[] constructors = aClass.getConstructors();
 
-        Constructor<?>[] cc;
-        cc = aClass.getConstructors(Integer.class, Integer.class);
+        Constructor<?>[] cc = aClass.getConstructors(Integer.class, Integer.class);
 
 
         for(Constructor c : constructors){
@@ -29,14 +27,21 @@ public class TestApp {
         }
         Constructor<?> theShortestConstructor = Arrays
                 .stream(constructors)
-                .sorted(Comparator.comparingInt((Constructor<?> o) -> o.getParameterCount()).reversed())
+                .sorted(Comparator.comparingInt(Constructor::getParameterCount))
                 .findFirst()
                 .orElseThrow(() -> new IllegalStateException("no constructor found"));
         System.out.println(theShortestConstructor);
-        Constructor<?> theLongestConstructor = Arrays
-                .stream(constructors)
-                .sorted(Comparator.comparingInt((Constructor<?> o) -> o.getParameterCount()).reversed())
-                .findFirst()
+        List<Constructor<?>> toSort = new ArrayList<>();
+        for (Constructor<?> constructor : constructors) {
+            toSort.add(constructor);
+        }
+        toSort.sort(Comparator.comparingInt((Constructor<?> o) -> o.getParameterCount()));
+        Optional<Constructor<?>> found = Optional.empty();
+        for (Constructor<?> constructor : toSort) {
+            found = Optional.of(constructor);
+            break;
+        }
+        Constructor<?> theLongestConstructor = found
                 .orElseThrow(() -> new IllegalStateException("no constructor found"));
         System.out.println(theLongestConstructor);
 
