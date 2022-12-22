@@ -19,7 +19,7 @@ public class TestApp {
         Class<?> aClass = Class.forName(classname);
         Constructor<?>[] constructors = aClass.getConstructors();
 
-        Constructor<?>[] cc = aClass.getConstructors(Integer.class, Integer.class);
+        Constructor<?>[] cc = aClass.getConstructors();
 
 
         for(Constructor c : constructors){
