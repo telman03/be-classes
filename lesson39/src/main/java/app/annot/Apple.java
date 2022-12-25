@@ -1,4 +1,4 @@
-package app;
+package app.annot;
 
 import app.annot.Comment;
 import app.annot.Ripe;

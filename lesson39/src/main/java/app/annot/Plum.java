@@ -1,4 +1,4 @@
-package app;
+package app.annot;
 
 public class Plum {
     public void printMe(){
