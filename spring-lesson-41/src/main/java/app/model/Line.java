@@ -1,5 +1,8 @@
 package app.model;
 
+import lombok.Getter;
+
+@Getter
 public class Line {
     String name;
     Double price;
