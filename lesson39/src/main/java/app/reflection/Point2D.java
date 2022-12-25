@@ -1,4 +1,4 @@
-package app;
+package app.reflection;
 
 public class Point2D {
     Integer x;

@@ -1,4 +1,4 @@
-package app;
+package app.reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -15,7 +15,7 @@ public class TestApp {
     }
 
     public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
-        String classname = "app.Point2D";
+        String classname = "app.reflection.Point2D";
         Class<?> aClass = Class.forName(classname);
         Constructor<?>[] constructors = aClass.getConstructors();
 
