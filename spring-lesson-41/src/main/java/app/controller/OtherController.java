@@ -1,10 +1,9 @@
-package app;
+package app.controller;
 
 import app.model.Line;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -15,12 +14,7 @@ import java.util.Optional;
  */
 
 @Controller
-public class PageController {
-    // http://localhost:8080/page
-    @GetMapping("page")
-    public String page_handle(Model model){
-        return "page01";
-    }
+public class OtherController {
 
     // http://localhost:8080/item
     @ResponseBody

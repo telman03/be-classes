@@ -1,4 +1,4 @@
-package app;
+package app.controller;
 
 import app.model.Line;
 import org.springframework.http.HttpStatus;

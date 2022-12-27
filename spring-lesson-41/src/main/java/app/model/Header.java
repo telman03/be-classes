@@ -1,5 +1,8 @@
 package app.model;
 
+import lombok.Getter;
+
+@Getter
 public class Header {
     String name;
     String price;
