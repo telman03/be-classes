@@ -2,14 +2,12 @@ package app.model;
 
 import lombok.Data;
 
-import java.util.Optional;
-import java.util.UUID;
-
-
 @Data
-public class Airline {
-    Optional<UUID> id;
+public class AirlineUpdateRq {
+
     String name;
     String code;
     String country;
+
 }
+
