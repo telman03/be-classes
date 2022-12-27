@@ -11,4 +11,7 @@ public class Line {
         this.name = name;
         this.price = price;
     }
+    public String priceFormatted() {
+        return String.format("%.3f", price);
+    }
 }
