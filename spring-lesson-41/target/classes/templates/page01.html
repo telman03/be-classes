@@ -16,7 +16,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each = "line: ${lines}">
+        <!--/*@thymesVar id="line" type="app"*/-->
+        <tr th:each = "line: ${lines}">
                 <td th:text="${line.name}">#</td>
                 <td th:text="${line.priceFormatted()}">#</td>
             </tr>
