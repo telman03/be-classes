@@ -1,45 +1,43 @@
 package app.controller;
 
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import javax.crypto.spec.OAEPParameterSpec;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.Arrays;
-import java.util.Optional;
-import java.util.UUID;
+import javax.servlet.http.HttpSession;
 
 @RestController
-@RequestMapping("booking")
+@RequestMapping("book")
+@SessionAttributes(UserData.keyName) // KEY in attributes Map<String, Object>
 public class BookingController {
-    private final String cookieName = "JID";
-    private final String NOT_FOUND = "Cookie not found";
 
-    private Optional<Cookie> find(HttpServletRequest rq){
-        return Optional.ofNullable(rq.getCookies())
-                .flatMap(cc ->
-                        Arrays.stream(cc).filter(c -> c.getName().equals(cookieName)).findFirst()
-        );
+    @ModelAttribute(UserData.keyName)
+    public UserData initialCreation() {
+        return UserData.make();
     }
 
-
-    // http://localhost:8080/booking/z
-    @GetMapping("z")
-    public String zero(HttpServletResponse rs){
-        rs.addCookie(new Cookie(cookieName, UUID.randomUUID().toString()));
-        return "cookie set";
-    }
-
-    // http://localhost:8080/booking/a
+    // http://localhost:8080/book/a
     @GetMapping("a")
-    public String first(HttpServletRequest rq){
-        Optional<Cookie> cookie = find(rq);
-        return "Hello";
+    public String a(@ModelAttribute(UserData.keyName) UserData userData, HttpSession session) {
+        System.out.println(userData);
+        return userData.toString();
+    }
+
+    // http://localhost:8080/book/b/lang/AZ
+    // http://localhost:8080/book/b/lang/UA
+    @GetMapping("b/lang/{lang}")
+    public String b(@ModelAttribute(UserData.keyName) UserData userData, @PathVariable String lang, HttpSession session) {
+        System.out.println(userData);
+        userData.setLanguage(lang);
+        System.out.println(userData);
+        return String.format("New language `%s` set", lang);
+    }
+
+    // http://localhost:8080/book/b/res/1920
+    // http://localhost:8080/book/b/res/3840
+    @GetMapping("b/res/{res}")
+    public String c(@ModelAttribute(UserData.keyName) UserData userData, @PathVariable Integer res, HttpSession session) {
+        userData.setScreen(res);
+        return String.format("New resolution `%d` set", res);
     }
 
 }
+
