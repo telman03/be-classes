@@ -42,4 +42,7 @@
 - Spring Boot, Spring MVC
 - Spring MVC, REST API, Restful web service
 - Spring JDBC, H2
+- ORM basics. Hibernate p1
+- ORM basics. Hibernate p2
+
 
