@@ -44,6 +44,6 @@
 - Spring JDBC, H2
 - ORM basics. Hibernate p1
 - ORM basics. Hibernate p2
-- DTO pattern. DTO validation. Jackson. Lombok
+- DTO pattern. DTO validation. Jackson. Lombok 
 
 
