@@ -5,7 +5,7 @@
 - Control structures: if-else / switch / ternary / unary operation. Logical operations: !, &&, ||. Scanner. Loops, generating pseudo-random values 
 - Arrays. Working with strings
 - Methods in Java
-- Objects, Comparing objects, visibility modifiers, static
+- Objects, Comparing objects, visibility modifiers, static 
 - Enum, classloader, Java Memory model. Testing Java code
 - OOP basics, abstract classes. Interfaces
 - Collection API, Lists, generics
