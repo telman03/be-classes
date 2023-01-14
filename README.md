@@ -46,4 +46,4 @@
 - ORM basics. Hibernate p2
 - DTO pattern. DTO validation. Jackson. Lombok 
 - Spring Data JPA
- 
+- Paging and sorting, practice working with repositories
