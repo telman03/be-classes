@@ -47,3 +47,4 @@
 - DTO pattern. DTO validation. Jackson. Lombok 
 - Spring Data JPA
 - Paging and sorting, practice working with repositories
+- Testing Spring application
