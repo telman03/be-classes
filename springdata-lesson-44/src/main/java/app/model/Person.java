@@ -26,5 +26,9 @@ public class Person {
 //    @Column(name = "password1")
     private String password;
 
+    private Integer age;
+
+    private Boolean checked;
+
 }
 
