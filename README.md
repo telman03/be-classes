@@ -1,11 +1,11 @@
-# ABB Back-end Classes 
+# ABB Back-end Classes  
  
 ## Module 1: Basic Java 
 - About Java. Classes, packages, main(). System.out. Variables, scope of visibility, primitive data types, null. Default values, type casting. Ascending vs descending type cast 
 - Control structures: if-else / switch / ternary / unary operation. Logical operations: !, &&, ||. Scanner. Loops, generating pseudo-random values 
 - Arrays. Working with strings
 - Methods in Java
-- Objects, Comparing objects, visibility modifiers, static
+- Objects, Comparing objects, visibility modifiers, static 
 - Enum, classloader, Java Memory model. Testing Java code
 - OOP basics, abstract classes. Interfaces
 - Collection API, Lists, generics
@@ -19,10 +19,10 @@
 - Maven, HTTP, Server, Servlet API. Jetty server 
 - Servlet API, Freemarker template, Annotations
 - JDBC, connection, statements. Relational databases. SQL basics
-- Creating database schema. ER-diagram. Keys, joins, relations
+- Creating database schema. ER-diagram. Keys, joins, relations 
 - Grouping operations, nested queries
 - Views, stored procedures, triggers, indices, transactions, transaction isolation levels
-- Servlet filters, cookies, auth. HTTP session 
+- Servlet filters, cookies, auth. HTTP session  
 - Module recap, practice 
   
 ## Module 3: Algorythms
@@ -35,7 +35,7 @@
 - Trees 
 - Graphs, search in graphs. BFS, DFS
 - Snake game introduction
-- Snake challenge
+- Snake challenge 
 
 ## Module 4: Java Frameworks
 - Spring Framework basics. Inversion of Control and Dependency Injection principles. Spring Beans
@@ -44,5 +44,7 @@
 - Spring JDBC, H2
 - ORM basics. Hibernate p1
 - ORM basics. Hibernate p2
-
-
+- DTO pattern. DTO validation. Jackson. Lombok 
+- Spring Data JPA
+- Paging and sorting, practice working with repositories
+- Testing Spring application
