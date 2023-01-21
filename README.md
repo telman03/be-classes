@@ -48,3 +48,5 @@
 - Spring Data JPA
 - Paging and sorting, practice working with repositories
 - Testing Spring application
+- Spring Security
+
