@@ -16,5 +16,8 @@ public class Person {
     @Column(name = "name")
     private String name;
 
+    @OneToOne
+    @JoinColumn(name = "extra_id", referencedColumnName = "x_id")
+    private Extra extra;
 
 }
