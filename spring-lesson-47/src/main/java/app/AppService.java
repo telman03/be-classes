@@ -20,4 +20,7 @@ public class AppService {
         if (true) throw new IllegalArgumentException("boom!");
         return "Fine";
     }
+    public String doSomething3(int x, int y){
+        return String.format("%d / %d = %d", x ,y, x / y);
+    }
 }
