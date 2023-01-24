@@ -1,5 +1,8 @@
 package app;
 
+import app.ex.LoginError;
+import app.ex.PasswordError;
+import app.ex.TokenError;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -40,9 +43,30 @@ public class AppController {
         return appService.doSomething3(x, y);
     }
 
+
+    // http://localhost:8080/4
+
+    @GetMapping("4")
+    public String handle4(){
+        return appService.doSomething4();
+    }
+
+    // http://localhost:8080/5
+
+    @GetMapping("5")
+    public String handle5(){
+        return appService.doSomething5();
+    }
+
+
     @ExceptionHandler(ArithmeticException.class)
     public ResponseEntity<?> handleError() {
         return ResponseEntity.status(501).build();
+    }
+
+    @ExceptionHandler({LoginError.class, PasswordError.class, TokenError.class})
+    public ResponseEntity<?> handleMyError() {
+        return ResponseEntity.status(502).build();
     }
 
 }

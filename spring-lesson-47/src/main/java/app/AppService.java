@@ -1,7 +1,10 @@
 package app;
 
+import app.ex.LoginError;
+import app.ex.PasswordError;
 import org.springframework.stereotype.Service;
 
+import javax.security.auth.login.LoginException;
 import java.util.Optional;
 
 
@@ -23,4 +26,14 @@ public class AppService {
     public String doSomething3(int x, int y){
         return String.format("%d / %d = %d", x ,y, x / y);
     }
+
+
+    public String doSomething4(){
+        throw new LoginError("jim");
+    }
+
+    public String doSomething5(){
+        throw new PasswordError("qwerty12345");
+    }
+
 }
