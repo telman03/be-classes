@@ -69,4 +69,30 @@ public class AppController {
         return ResponseEntity.status(502).build();
     }
 
+    //    @ExceptionHandler(ArithmeticException.class)
+    public ResponseEntity<?> handleError1() {
+        return ResponseEntity.status(501).build();
+    }
+
+
+//    @ExceptionHandler({LoginError.class, PasswordError.class, TokenError.class})
+//    public ResponseEntity<?> handleMyError(AuthError myException) {
+//        String message = switch (myException) {
+//            case LoginError x1 -> x1.loginName;
+//            case PasswordError x1 -> x1.passwordProvided;
+//            default -> myException.getMessage();
+//        };
+//        return ResponseEntity.status(502).body(
+//                new ErrorPayload(myException.getClass().getSimpleName(), message)
+//        );
+//    }
+
+    // http://localhost:8080/6
+//    @GetMapping("6")
+//    public void handle6() {
+//        Book book = new Book();
+//        bookRepo.save(book);
+//    }
 }
+
+

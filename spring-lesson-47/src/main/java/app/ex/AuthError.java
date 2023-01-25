@@ -1,4 +1,6 @@
 package app.ex;
 
-public interface AuthError {
+
+public class AuthError extends RuntimeException {
 }
+

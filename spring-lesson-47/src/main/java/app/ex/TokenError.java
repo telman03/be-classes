@@ -1,16 +1,19 @@
 package app.ex;
 
 import java.time.Instant;
+import java.time.Instant;
 
-public class TokenError extends RuntimeException implements AuthError{
-    private final String token;
+public class TokenError extends AuthError{
 
-    private final Instant instant;
-
+    public final String token;
+    public final Instant instant;
 
     public TokenError(String token, Instant instant) {
         super();
         this.token = token;
         this.instant = instant;
     }
+
 }
+
+
