@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 import java.util.HashMap;
@@ -13,19 +14,21 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Configuration
-public class UserDetailsHashMap {
+public class UserDetailsHashMapEncoded {
     private final Map<String, String> storage = new HashMap<>();
+    private final PasswordEncoder enc;
 
-    public UserDetailsHashMap(){
+    public UserDetailsHashMapEncoded(PasswordEncoder enc){
+        this.enc = enc;
         storage.put("jim", "123");
         storage.put("john", "234");
     }
 
     private UserDetails mapper(Map.Entry<String, String> entry){
         return User
-                .withDefaultPasswordEncoder()
-                .username(entry.getKey())
+                .withUsername(entry.getKey())
                 .password(entry.getValue())
+                .passwordEncoder(x -> enc.encode(x))
                 .roles()
                 .build();
     }
