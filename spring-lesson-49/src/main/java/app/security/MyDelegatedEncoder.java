@@ -10,9 +10,7 @@ import java.util.HashMap;
 
 @Configuration
 public class MyDelegatedEncoder {
-
     private final static String ALGORITHM = "pbkdf2";
-
     @Bean
     public static PasswordEncoder build() {
         return new DelegatingPasswordEncoder(ALGORITHM,

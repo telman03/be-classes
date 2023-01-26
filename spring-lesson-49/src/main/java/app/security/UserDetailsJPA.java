@@ -1,34 +1,37 @@
 package app.security;
 
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Configuration
-public class UserDetailsHashMapEncoded {
-    private final Map<String, String> storage = new HashMap<>();
-    private final PasswordEncoder enc;
+@RequiredArgsConstructor
+public class UserDetailsJPA {
 
-    public UserDetailsHashMapEncoded(PasswordEncoder enc){
-        this.enc = enc;
-        storage.put("jim", "123");
-        storage.put("john", "234");
-    }
+    private final DbUserRepo repo;
 
-    private UserDetails mapper(Map.Entry<String, String> entry){
+
+//    private final PasswordEncoder enc;
+//
+//    public UserDetailsJPA(PasswordEncoder enc){
+//        this.enc = enc;
+//        storage.put("jim", "123");
+//        storage.put("john", "234");
+//    }
+
+    private UserDetails mapper(DbUser dbUser){
         return User
-                .withUsername(entry.getKey())
-                .password(entry.getValue())
-                .passwordEncoder(x -> enc.encode(x))
+                .withUsername(dbUser.getUsername())
+                .password(dbUser.getPassword()) // password already stored in db encoded
+//                .passwordEncoder(x -> enc.encode(x))
                 .roles()
                 .build();
     }
@@ -36,7 +39,7 @@ public class UserDetailsHashMapEncoded {
     @Bean
     public UserDetailsService uds(){
         return new InMemoryUserDetailsManager(
-                storage.entrySet().stream()
+                StreamSupport.stream(repo.findAll().spliterator(), false)
                         .map(this::mapper)
                         .collect(Collectors.toSet())
         );
