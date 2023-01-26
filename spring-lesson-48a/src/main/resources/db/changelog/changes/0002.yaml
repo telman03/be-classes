@@ -1,0 +1,22 @@
+databaseChangeLog:
+- changeSet:
+    id: 1674719587248-1
+    author: telman (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: a_surname
+            type: text
+        tableName: author
+- changeSet:
+    id: 1674719587248-2
+    author: telman (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: author
+            type: text
+        tableName: book
+

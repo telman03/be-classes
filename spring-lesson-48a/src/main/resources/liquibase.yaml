@@ -1,0 +1,17 @@
+# production
+url: jdbc:postgresql://localhost:5432/be5prod
+username: postgres
+password: eden258
+
+
+# development
+referenceUrl: jdbc:postgresql://localhost:5432/be5
+referenceUsername: postgres
+referencePassword: eden258
+
+
+changeLogFile: src/main/resources/db/changelog/master.yaml
+
+outputChangeLogFile: src/main/resources/db/changelog/master.yaml
+
+diffChangeLogFile: src/main/resources/db/changelog/diff.yaml

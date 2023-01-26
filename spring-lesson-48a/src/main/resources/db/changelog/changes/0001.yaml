@@ -1,0 +1,89 @@
+databaseChangeLog:
+- changeSet:
+    id: 1674717739239-1
+    author: telman (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: ab_pkey
+            name: author_id
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: ab_pkey
+            name: book_id
+            type: BIGINT
+        tableName: ab
+- changeSet:
+    id: 1674717739239-2
+    author: telman (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: author_pkey
+            name: a_id
+            type: INTEGER
+        - column:
+            name: a_name
+            type: VARCHAR(255)
+        tableName: author
+- changeSet:
+    id: 1674717739239-3
+    author: telman (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: book_pkey
+            name: b_id
+            type: BIGINT
+        - column:
+            name: b_title
+            type: VARCHAR(255)
+        tableName: book
+- changeSet:
+    id: 1674717739239-4
+    author: telman (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: book_id
+        baseTableName: ab
+        constraintName: fk6tcmllo59wyig2djdfeue6dq8
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: b_id
+        referencedTableName: book
+        validate: true
+- changeSet:
+    id: 1674717739239-5
+    author: telman (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: author_id
+        baseTableName: ab
+        constraintName: fkhoj3gyva60s36o82jo9ekynxf
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: a_id
+        referencedTableName: author
+        validate: true
+
