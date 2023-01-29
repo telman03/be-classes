@@ -49,4 +49,5 @@
 - Paging and sorting, practice working with repositories
 - Testing Spring application
 - Spring Security
-
+- JWT token vs cookies. OAuth2.0. Logging
+- Spring AOP basics. Handling exceptions
