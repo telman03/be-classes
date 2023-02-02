@@ -51,3 +51,4 @@
 - Spring Security
 - JWT token vs cookies. OAuth2.0. Logging
 - Spring AOP basics. Handling exceptions
+- Spring websockets
