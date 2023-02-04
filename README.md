@@ -53,3 +53,5 @@
 - Spring AOP basics. Handling exceptions
 - Spring websockets
 - Multithreading introduction
+- Thread pools, executor services, Future. Locks
+
