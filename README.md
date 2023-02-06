@@ -35,7 +35,7 @@
 - Trees 
 - Graphs, search in graphs. BFS, DFS
 - Snake game introduction
-- Snake challenge 
+- Snake challenge  
 
 ## Module 4: Java Frameworks
 - Spring Framework basics. Inversion of Control and Dependency Injection principles. Spring Beans
