@@ -30,7 +30,7 @@
 - Bit operations 
 - Recursion 
 - Linked lists 
-- Stack, Queue. Hash data structures
+- Stack, Queue. Hash data structures 
 - Binary Search 
 - Trees 
 - Graphs, search in graphs. BFS, DFS
