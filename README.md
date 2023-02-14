@@ -34,7 +34,7 @@
 - Binary Search 
 - Trees 
 - Graphs, search in graphs. BFS, DFS
-- Snake game introduction
+- Snake game introduction 
 - Snake challenge  
 
 ## Module 4: Java Frameworks
